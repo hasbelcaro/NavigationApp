@@ -10,6 +10,7 @@ import ProfileScreen from '../screens/profile/ProfileScreen';
 import { colors } from '../theme/theme';
 import { Text, useWindowDimensions, View } from 'react-native';
 import { BottomTabNavigator } from './BottomTabNavigator';
+import Ionicons from '../components/shared/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,7 +32,6 @@ export const DrawerNavigator = () => {
         drawerItemStyle: {
           borderRadius: 100,
           paddingHorizontal: 16,
-
         },
       }}>
       {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
@@ -49,9 +49,14 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
           height: 200,
           backgroundColor: colors.primary,
           marginBottom: 30,
-          borderRadius: 50
+          marginHorizontal: 16,
+          borderRadius: 50,
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
-      />
+      >
+        <Ionicons name='person-circle-outline' size={100} color={colors.white} />
+      </View>
 
       <DrawerItemList {...props} />
 

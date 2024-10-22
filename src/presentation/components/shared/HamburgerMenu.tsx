@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import Ionicons from './Ionicons';
 
 const HamburgerMenu = () => {
 
@@ -10,7 +11,7 @@ const HamburgerMenu = () => {
     navigation.setOptions({
       headerLeft: () => (
         <Pressable onPress={() => navigation.dispatch(DrawerActions.toggleDrawer)}>
-          <Text>HMenu</Text>
+          <Ionicons name="reorder-four-outline" size={30} color="black" />
         </Pressable>
       )
     })
